@@ -21,6 +21,21 @@ urlpatterns = [
     ),
     url(r"^accounts/", include("allauth.urls")),
     # Your stuff: custom urls includes go here
+    url(
+        r"^read/$",
+        TemplateView.as_view(template_name="pages/read.html"),
+        name="read",
+    ),
+    url(
+        r"^rs/two-keys$",
+        TemplateView.as_view(template_name="pages/two-keys.html"),
+        name="two-keys",
+    ),
+    url(
+        r"^rs/two-keys/ch-5$",
+        TemplateView.as_view(template_name="pages/two-keys-ch-5.html"),
+        name="two-keys-ch-5",
+    ),
 ] + static(
     settings.MEDIA_URL, document_root=settings.MEDIA_ROOT
 )
