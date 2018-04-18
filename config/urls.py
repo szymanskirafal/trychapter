@@ -36,6 +36,21 @@ urlpatterns = [
         TemplateView.as_view(template_name="pages/two-keys-ch-5.html"),
         name="two-keys-ch-5",
     ),
+    url(
+        r"^write/$",
+        TemplateView.as_view(template_name="pages/write.html"),
+        name="write",
+    ),
+    url(
+        r"^write/add-book/$",
+        TemplateView.as_view(template_name="pages/add-book.html"),
+        name="add_book",
+    ),
+    url(
+        r"^write/add-book/add-chapter$",
+        TemplateView.as_view(template_name="pages/add-chapter.html"),
+        name="add_chapter",
+    ),
 ] + static(
     settings.MEDIA_URL, document_root=settings.MEDIA_ROOT
 )

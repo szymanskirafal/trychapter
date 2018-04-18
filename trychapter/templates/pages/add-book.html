@@ -1,0 +1,32 @@
+{% extends "base-with-no-nav.html" %}
+{% block content %}
+
+
+{% include "_nav2.html" %}
+<div class="container py-5">
+  <h1>Add new book</h1>
+  <p>Hello dear Author</p>
+  <form>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Add title</label>
+      <input class="form-control" type="text" placeholder="Enter title of the book here">
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Add second title</label>
+      <input class="form-control" type="text" placeholder="Enter second title here (optional)">
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Add second title</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="5">Enter short description here</textarea>
+    </div>
+    <button type="submit" class="btn btn-outline-primary">Save</button>
+  </form>
+  <br><br>
+  <a href="{% url 'add_chapter' %}" class="btn btn-outline-dark" role="button">Add chapter</a>
+
+
+
+</div>
+
+
+{% endblock content %}
