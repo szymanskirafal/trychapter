@@ -27,6 +27,11 @@ urlpatterns = [
         name="read",
     ),
     url(
+        r"^read-something-new/$",
+        TemplateView.as_view(template_name="pages/read-something-new.html"),
+        name="read-something-new",
+    ),
+    url(
         r"^rs/two-keys$",
         TemplateView.as_view(template_name="pages/two-keys.html"),
         name="two-keys",
