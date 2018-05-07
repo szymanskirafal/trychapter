@@ -5,89 +5,40 @@
 {% include "_nav2.html" %}
 <div class="container py-5">
 
-  <h1 id=top>Read</h1>
+  <h1 id=top>Search what to read</h1>
 
   <form>
     <div class="form-group">
       <label for="exampleFormControlTextarea1"></label>
       <input class="form-control" type="text" placeholder="Search by title or author">
     </div>
+    <div class="form-group">
+      <select class="form-control" id="exampleFormControlSelect1">
+        <option>All categories</option>
+        <option>Romance</option>
+        <option>Thriller</option>
+        <option>Historic</option>
+        <option>Life</option>
+        <option>Drama</option>
+      </select>
+    </div>
+    <p>
+      <button class="btn btn-outline-secondary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        more precise searching
+      </button>
+    </p>
+    <div class="collapse" id="collapseExample">
+      <div class="card card-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+      </div>
+      <br><br>
+    </div>
+
+    <button type="submit" class="btn btn-outline-dark">Submit</button>
   </form>
-  <div class="sticky-top">
-    <a class="btn btn-outline-secondary sticky-top" href="#" role="button">tags and filters</a>
-  </div>
   <br><br>
-
-
-    <div class="row">
-      <div class="col-8">
-        <p>Battle of Nthing</p>
-        <p>by author</p>
-      </div>
-      <div class="col-4">
-        <p>4,25</p>
-        <p>1500 readers</p>
-      </div>
-    </div>
-    <hr>
-    <div class="row">
-      <div class="col-8">
-        <p>Who killed Laura Palmer</p>
-        <p>by author</p>
-      </div>
-      <div class="col-4">
-        <p>4,25</p>
-        <p>1500 readers</p>
-      </div>
-    </div>
-    <hr>
-    <div class="row">
-      <div class="col-8">
-        <p>Eat, Drink, Pay, repeat</p>
-        <p>by author</p>
-      </div>
-      <div class="col-4">
-        <p>4,25</p>
-        <p>1500 readers</p>
-      </div>
-    </div>
-    <hr>
-    <div class="row">
-      <div class="col-8">
-        <p>It's not your faul... Just joking.</p>
-        <p>by author</p>
-      </div>
-      <div class="col-4">
-        <p>4,25</p>
-        <p>1500 readers</p>
-      </div>
-    </div>
-    <hr>
-    <div class="row">
-      <div class="col-8">
-        <p>OZ</p>
-        <p>by author</p>
-      </div>
-      <div class="col-4">
-        <p>4,25</p>
-        <p>1500 readers</p>
-      </div>
-    </div>
-    <hr>
-    <div class="row">
-      <div class="col-8">
-        <p>What the...</p>
-        <p>by author</p>
-      </div>
-      <div class="col-4">
-        <p>4,25</p>
-        <p>1500 readers</p>
-      </div>
-    </div>
-    <hr>
-
 </div>
-</div>
+
 
 
 {% endblock content %}
