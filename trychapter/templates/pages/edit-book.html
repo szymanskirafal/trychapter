@@ -1,0 +1,23 @@
+{% extends "base-with-no-nav.html" %}
+{% block content %}
+
+
+{% include "_nav2.html" %}
+<div class="container py-5">
+  <h1>Title</h1>
+  <p>the author is YOU</p>
+  <p>Chapters:</p>
+  <a href="#">1. Chapter</a><br><br>
+  <a href="#">2. Chapter</a><br><br>
+  <a href="#">3. Chapter</a><br><br>
+  <a href="#">4. Chapter</a><br><br>
+  <a href="{% url 'edit_chapter' %}">5. Chapter</a><br><br>
+  <a href="#">6. Chapter</a><br><br>
+  <a href="#">7. Chapter</a><br><br>
+  <a href="#">8. Chapter</a><br><br>
+  <a href="{% url 'add_chapter' %}" class="btn btn-lg btn-outline-dark" role="button">Add chapter</a>
+
+</div>
+
+
+{% endblock content %}

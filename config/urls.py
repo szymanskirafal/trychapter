@@ -52,9 +52,24 @@ urlpatterns = [
         name="add_book",
     ),
     url(
+        r"^write/edit-book/$",
+        TemplateView.as_view(template_name="pages/edit-book.html"),
+        name="edit_book",
+    ),
+    url(
+        r"^write/edit-book/edit-chapter$",
+        TemplateView.as_view(template_name="pages/edit-chapter.html"),
+        name="edit_chapter",
+    ),
+    url(
         r"^write/add-book/add-chapter$",
         TemplateView.as_view(template_name="pages/add-chapter.html"),
         name="add_chapter",
+    ),
+    url(
+        r"^write/money/$",
+        TemplateView.as_view(template_name="pages/writer-money.html"),
+        name="writer_money",
     ),
 ] + static(
     settings.MEDIA_URL, document_root=settings.MEDIA_ROOT
