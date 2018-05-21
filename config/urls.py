@@ -2,6 +2,7 @@ from django.conf import settings
 from django.conf.urls import include, url
 from django.conf.urls.static import static
 from django.contrib import admin
+from django.urls import path
 from django.views.generic import TemplateView
 from django.views import defaults as default_views
 
@@ -20,7 +21,11 @@ urlpatterns = [
         include("trychapter.users.urls", namespace="users"),
     ),
     url(r"^accounts/", include("allauth.urls")),
+
+
     # Your stuff: custom urls includes go here
+    path('/', include('books.urls')),
+
     url(
         r"^read/$",
         TemplateView.as_view(template_name="pages/read.html"),
@@ -41,16 +46,13 @@ urlpatterns = [
         TemplateView.as_view(template_name="pages/two-keys-ch-5.html"),
         name="two-keys-ch-5",
     ),
+
     url(
         r"^writer/$",
         TemplateView.as_view(template_name="pages/writer.html"),
         name="writer",
     ),
-    url(
-        r"^writer/add-book/$",
-        TemplateView.as_view(template_name="pages/add-book.html"),
-        name="add_book",
-    ),
+    
     url(
         r"^writer/edit-book/$",
         TemplateView.as_view(template_name="pages/edit-book.html"),
